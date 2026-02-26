@@ -103,11 +103,60 @@ to import that --> const any = require("file path")
 Date : 26/02/2026 
 ================= 
 
+NodeJS + Express --> apis 
+
+Without Express *** --> API 
+Node built-in module HTTP 
+
+Express : 
+---------- 
+
+npm i express 
+
+web server v/s application server : 
+
+physical machine --> physical server --> web server [request,response] --> application server --> 
 
 
+app.listen(3000,()=>{
+    // code 
+})
+port after 1600 -- bcz window aquire till 1600 for server 
+
+HOT RELOAD : server auto start 
+
+dev tools : --> only for developer 
+--> system level / dev dependencies 
+- npm i nodemon -g      --> global level 
+- sudo npm i nodemon -g         --> mac 
+        or 
+- npm i nodemon --dev       --> dev level 
+
+nodemon --> to start server 
+
+app.get("url",(req,res)=>{ 
+    // any response 
+}) 
+
+ex., response : 
+res.send("") 
+res.json({ 
+    message:"" 
+    data:"" 
+}) 
 
 
+from home : 
+------------ 
+download postman tool 
 
+task : 
+------- 
+id --> find that id record from dummy array 
+- if record found senad as response 
+- if record not found from id --> it is not available send response message user not found with id 
+Hint : find function 
+        --> don't forget to send response from both if and else 
 
 
 
