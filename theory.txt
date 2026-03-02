@@ -1,3 +1,9 @@
+Week : 6 
+========= 
+========= 
+
+
+
 Date : 23/02/2026 
 ================= 
 
@@ -163,7 +169,81 @@ Hint : find function
 Date : 27/02/2026 
 ================= 
 
+src 
+    controllers
+    models
+    utils
+    routes
+<------------------------------------->    
+
+server --> app.js --> req -- routes --> controllers [res --> send] --> model 
+
+controllers : all tables    ex., UserController --> CRUD...Business logic 
+routes : UserRouters --> controller bind --> url --> controller --> function 
+util : reusable...
+models : mongodb 
+
+Naming Convention : 
+UserController
+user_controller
+
+tasks : 
+-------- 
+
+re.params --> salary : ex., 20000 
+20000 < salary --> all employee 
+Hints : --> don't use .find()
+        --> use .filter()
+        --> employee not found condition 
 
 
 
 
+
+
+
+Week : 7 
+========= 
+========= 
+
+
+
+Date : 02/03/2026 
+================== 
+
+MONGODB DATABASE : 
+------------------- 
+
+2 packages : 
+1> mongodb package : 
+    - native mongodb 
+    --> collection, database manual 
+2> mongoose package : 
+    - orm tool 
+    --> collection, type safe, database automatically 
+
+UserModel : 
+--> UserModel will bind with one collection of our database... 
+
+mongoose : 
+=========== 
+
+npm i mongoose 
+
+module.exports = mongoose.model("users", userSchema);
+                                    |           | 
+                                    V           V 
+                                collection   object 
+--> bind "users" collection with userSchema object 
+    - now we can use userSchema object to perform any  on collection  
+
+utils --> models --> controllers --> routes 
+  |          |             |            |----> routing 
+  |          |             |----> api creation 
+  |          |----> db table 
+  |----> db collection 
+
+DBconnection 
+ProductModel 
+ProductController 
+ProductRoutes 
